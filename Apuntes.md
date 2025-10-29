@@ -10,27 +10,30 @@
 ## 2. Página Web vs Aplicación Web
 | Característica         | Página Web (Web Estática)        | Aplicación Web (Web Dinámica)      |
 |-------------------------|----------------------------------|-------------------------------------|
-| Contenido              | Fijo (no cambia mucho)           | Dinámico (cambia según el usuario) |
+| Contenido              | Fijo (no cambia mucho)           | Dinámico (va cambiando)            |
 | Interactividad         | Muy limitada                     | Alta (formularios, botones, chats) |
 | Ejemplo                | Blog personal, web informativa   | Gmail, banca online, e-commerce    |
 
 ---
 
 ## 3. Frontend y Backend
+Las aplicaciones web siguen un modelo **cliente-servidor**, en el que el **cliente** (navegador) y el **servidor** (donde se aloja la aplicación) interactúan entre sí.
+
+Dentro de este modelo, distinguimos dos partes principales:
+
 - **Frontend**:
   - Parte de la aplicación web que se ejecuta en el cliente(navegador).
   - Parte visible para el usuario (interfaz).
   - Al tener que ser compatible con todos los clientes/navegadores las tecnologias estan estandarizadas.
-  - Las tecnologías utilizadas siempre son:
-    - **HTML**: estructura de la página.
+  - Las tecnologías básicas utilizadas son siempre:
+    - **HTML**: estructura.
     - **CSS**: estilo (colores, tamaños, fuentes).
     - **JavaScript**: algo de lógica e interactividad.
 
-
 - **Backend**:
-  - Parte de la aplicación web que se ejecuta en el cliente(navegador).
-  - Gran parte de la lógica de la aplicación ocurre aquí, en el **servidor**. Como por ejemplo procesar datos, acceder a la base de datos, autenticar usuarios.
-  - Algunas lenguajes comunes son Java, Python, PHP, Ruby o JavaScript
+  - Parte de la aplicación web que se ejecuta en el servidor.
+  - La mayoría de la lógica de la aplicación ocurre aquí, en el **servidor**. Como por ejemplo procesar datos, acceder a la base de datos o autenticar usuarios.
+  - Algunas lenguajes comunes son Java, Python, PHP o JavaScript
 
 ---
 
@@ -49,17 +52,15 @@
 
 ---
 
-## 5. Servidor Web vs Servidor de Aplicacion
-Aunque a veces se usen juntos, no son lo mismo:
+## 5. Servidor Web vs Servidor de Aplicaciones
+Aunque a veces se usan indistintamente, hay una diferencia importante entre ambos:
 
 ### Servidor Web
-- Es un **servidor HTTP**.  
-- Recibe peticiones HTTP del navegador y responde los recursos web solicitados.
+- Es un **servidor HTTP** (o  HTTPS).  
+- Recibe peticiones HTTP (o HTTPS) del navegador y responde con los recursos web solicitados.
 - Su función principal es **enviar el frontend** al cliente: HTML, CSS, JavaScript, imágenes u otros recursos.  
 - Cabe aclarar que el frontend no se almacena en el cliente, sino que se descarga desde el servidor web cada vez que se accede a la aplicación.
-- Ejemplos: **Apache**, **Nginx**, **Live Server**.
-
----
+- Ejemplos de servidores web: **node**, **Apache**, **Nginx**, **Live Server**.
 
 ### Servidor de Aplicaciones
 - Se encarga de **ejecutar el backend**: la lógica de la aplicación.  
@@ -67,24 +68,28 @@ Aunque a veces se usen juntos, no son lo mismo:
 - Genera contenido dinámico y se lo pasa al servidor web para que llegue al navegador.  
 - Ejemplos: **Tomcat**, **Node.js (framework)**.
 
+---
 
-## 5. Papel del Navegador
+## 6. Papel del Navegador
 - Interpreta el **código HTML, CSS y JS** en una interfaz visual.
-- Envía y recibe información del servidor.
-- Permite ejecutar código JavaScript en el lado del cliente.
+- Envía y recibe información del servidor web.
+- Permite ejecutar código JavaScript en el lado del cliente (el navegador).
 
 ---
 
-## 6. Protocolos Importantes
+## 7. Protocolos Importantes
+- **DNS (Domain Name System)**: sistema que traduce nombres de dominio legibles por humanos (como www.ejemplo.com) en direcciones IP numéricas que los ordenadores utilizan para localizarse en la red.
 - **HTTP/HTTPS**: protocolo para la transferencia de páginas web.
   - HTTPS añade seguridad (cifrado con TLS).
-- **FTP**: transferencia de archivos (cada vez menos usado en web pública).
+- **TLS/SSL**: protocolos para asegurar la comunicación en la web mediante cifrado.
 - **SMTP, IMAP, POP3**: protocolos relacionados con el correo electrónico.
-- **WebSockets**: permiten comunicación bidireccional en tiempo real (ejemplo: chats).
-
+- **WebSocket**: permiten comunicación bidireccional en tiempo real (ejemplo: chats).
+- **OAuth**: protocolo de autorización para permitir acceso seguro a recursos protegidos.
+- **TCP y UDP**: protocolos de transporte que gestionan cómo se envían los datos a través de la red.
+- **IP (Internet Protocol)**: protocolo que define cómo se direccionan y envían los paquetes de datos a través de la red.
 ---
 
-## 7. Arquitectura en Capas de Aplicaciones Web**
+## 8. Arquitectura en Capas de Aplicaciones Web**
 Organiza cómo se estructura el **código y la lógica** de una aplicación web.  
 Suele dividirse en **3 capas principales**:
 
@@ -105,27 +110,34 @@ Suele dividirse en **3 capas principales**:
 
 ![](../images/Tres_capas.png)
 
+Cabe mencionar que no se representa de forma explicita el servidor web, pero este es el que sirve el frontend al navegador para comunicarse con el backend.
+
 ---
 
 ## 8. Evolución de la Web
-- **Web 1.0** (años 90):
+- **Web 1.0 o Web Estática** (años 90):
   - Páginas estáticas.
   - Información unidireccional.
   - Ejemplo: primeras webs de periódicos.
 
-- **Web 2.0** (2000s):
+- **Web 2.0 o Web Social** (2000s):
   - Contenido dinámico e interactivo.
   - Redes sociales, blogs, wikis.
   - El usuario no solo lee, también **participa**.
 
-- **Web 3.0** (actualidad y futuro):
-  - Basada en inteligencia artificial, datos masivos y blockchain.
+- **Web 3.0 o Web Semántica** (actualidad):
+  - Información etiquetada con metadatos para ser entendida por máquinas.
+  - Contenido personalizado.
+  - Integración con inteligencia artificial.
+  - Descentralización y blockchain.
   - Aplicaciones descentralizadas.
-  - Mayor personalización.
+  - Interoperabilidad entre plataformas (distintas aplicaciones pueden comunicarse y compartir datos).
 
 ---
 
-## 9. Herramientas y Lenguajes Usados
+## 9. Herramientas y Lenguajes Utilizados
+Es habitual el uso de diversas herramientas y lenguajes en el desarrollo web. Habitualmente se utilizan librerías y frameworks, que son colecciones de código ya escrito, para facilitar el desarrollo.
+
 - **Frontend**:
   - HTML, CSS, JavaScript.
   - Frameworks: React, Angular, Vue.js.
@@ -134,17 +146,10 @@ Suele dividirse en **3 capas principales**:
   - Frameworks: Node.js, Django, Spring, Laravel.
 - **Bases de datos**:
   - Relacionales: MySQL, PostgreSQL.
-  - NoSQL: MongoDB, Redis.
+  - No relacionales (NoSQL (Not Only SQL)): MongoDB, Redis.
 - **Otros**:
   - Git/GitHub para control de versiones.
-  - Docker para despliegue.
-  - Servidores web: Apache, Nginx.
+  - Docker virtualización ligera y despliegue de aplicaciones.
+  - Servidores web: Apache, Nginx, Node.js.
 
 ---
-
-## 10. Resumen Final
-- Una aplicación web es **dinámica, interactiva y cliente-servidor**.  
-- El **frontend** es lo que ve el usuario; el **backend** maneja la lógica y los datos.  
-- La web ha pasado de ser estática (**Web 1.0**) a interactiva (**Web 2.0**) y ahora busca ser inteligente y descentralizada (**Web 3.0**).   
-- El **navegador** es la puerta de entrada a todo este ecosistema.  
-
